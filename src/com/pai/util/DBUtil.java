@@ -13,7 +13,7 @@ public class DBUtil {
 
   public static Connection getConnection() throws Exception{	
 	  Connection conn = null;
-	   	String url="jdbc:mysql://192.168.10.27:3306/paimai";
+	   	String url="jdbc:mysql://219.137.165.219:3306/paimai";
 	   	String userName = "dio";
 	   	String userPass = "lizhinan163";
 	    	try {
@@ -31,7 +31,8 @@ public class DBUtil {
   public static void close(Connection conn) throws Exception {
 	  if(conn!= null){
 		  try{
-			  conn.close();	  
+			  conn.close();	
+			  System.out.println("	πÿ±’¡¨Ω”	"); 
 		  }catch(SQLException e){
 			  e.printStackTrace(); 
 			  throw e;

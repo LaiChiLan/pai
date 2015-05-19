@@ -44,10 +44,13 @@ public class User implements java.io.Serializable {
 	 public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
-		public void setUserId(int userId) {
+	 
+     public void setUserId(int userId) {
 			this.userId = userId;
 		}
-		public void setUserName(String userName) {
+	public void setUserName(String userName) {
 			this.userName = userName;
 		}
+		
+	
 }

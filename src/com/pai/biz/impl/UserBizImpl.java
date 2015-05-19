@@ -9,7 +9,7 @@ import com.pai.dao.UserDao;
 import com.pai.entity.User;
 import com.pai.biz.UserBiz;
 
-@Service("userSerivce")
+@Service("UserBiz")
 public class UserBizImpl implements UserBiz {
 	@Autowired
 	UserDao userDao;		

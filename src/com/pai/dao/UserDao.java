@@ -8,9 +8,9 @@ import com.pai.entity.User;
  * 类名称：UserDao   
  * 类描述：用户控制dao实现数据库操作接口
  * 创建人：anan   
- * 创建时间：2012-12-21 下午11:05:46   
+ * 创建时间：2015-05-21 下午11:05:46   
  * 修改人：anan  
- * 修改时间：2012-12-21 下午11:05:46   
+ * 修改时间：2015-05-21 下午11:05:46   
  * 修改备注：   
  * @version        
  * */
@@ -31,4 +31,5 @@ public interface UserDao {
 
 	public boolean isExitByNameAndPass(User user) throws Exception;
 
+	
 }

@@ -23,7 +23,7 @@ import javax.xml.ws.WebServiceClient;
  * </p>
  * 
  */
-@WebServiceClient(name = "SSDLoginService", targetNamespace = "http://dao/", wsdlLocation = "http://192.168.10.27:8088/SSDLogin/SSDLoginPort?wsdl")
+@WebServiceClient(name = "SSDLoginService", targetNamespace = "http://dao/", wsdlLocation = "http://219.137.165.219:8088/SSDLogin/SSDLoginPort?wsdl")
 public class SSDLoginService extends Service {
 
 	private final static URL SSDLOGINSERVICE_WSDL_LOCATION;
@@ -36,9 +36,9 @@ public class SSDLoginService extends Service {
 			URL baseUrl;
 			baseUrl = com.stub.SSDLogin.SSDLoginService.class.getResource(".");
 			url = new URL(baseUrl,
-					"http://192.168.10.27:8088/SSDLogin/SSDLoginPort?wsdl");
+					"http://219.137.165.219:8088/SSDLogin/SSDLoginPort?wsdl");
 		} catch (MalformedURLException e) {
-			logger.warning("Failed to create URL for the wsdl Location: 'http://192.168.10.27:8088/SSDLogin/SSDLoginPort?wsdl', retrying as a local file");
+			logger.warning("Failed to create URL for the wsdl Location: 'http://219.137.165.219:8088/SSDLogin/SSDLoginPort?wsdl', retrying as a local file");
 			logger.warning(e.getMessage());
 		}
 		SSDLOGINSERVICE_WSDL_LOCATION = url;

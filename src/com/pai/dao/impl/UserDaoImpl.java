@@ -164,6 +164,7 @@ public class UserDaoImpl  implements UserDao{
 			 while(rst.next()){
 		    user.setPassWord(rst.getString("passWord") == null ? "" : rst.getString("passWord") ); 		
 			user.setUserName(rst.getString("userName") == null ? "" : rst.getString("userName") ); 
+			user.setAdmin(rst.getString("admin") == null ? "" : rst.getString("admin") ); 					 
 			user.setUserId(userId);
 			 }
 		} catch (Exception e) {
@@ -247,6 +248,7 @@ public class UserDaoImpl  implements UserDao{
 				 user.setUserId(rst.getInt("userId") ); 	
 				 user.setUserName(rst.getString("userName") == null ? "" : rst.getString("userName") ); 	
 				 user.setPassWord(rst.getString("passWord") == null ? "" : rst.getString("passWord") ); 					 
+				 user.setAdmin(rst.getString("admin") == null ? "" : rst.getString("admin") ); 					 
 			 }
 		 
 		} catch (Exception e) {
