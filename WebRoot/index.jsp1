@@ -1,0 +1,77 @@
+<%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<link href="CSS/layout.css" rel="stylesheet" type="text/css" />
+<%@taglib prefix="s" uri="/struts-tags"%>
+<html>
+  <jsp:include page="index-elements/index_top.jsp" />  
+<body>
+<div id="container">
+  
+  <div id="mainContent">
+  <!--这里是我刚才红色的地方  -->
+    <div id="sidebar">    
+       <ul id="opt_list">
+         <li><a href='propertyinfoAction!toListProcessByPager'>正在进行中</a></li>
+         <li><a>结果公布</a></li>
+       </ul>
+   <%--<s:action name="propertyinfoAction!toListProcessByPager" namespace="/" executeResult="true" />   
+       <s:action name="propertyinfoAction!toListfinish" namespace="/" executeResult="true" />    --%>
+    </div>
+  <!--这里是我刚才红色的地方  -->
+    <div id="content">2列左侧固定右侧自适应宽度+头部+尾部——<a href="http://www.aa25.cn">标准之路www.aa25.cn</a></div>
+
+  </div>
+  <div id="footer">This is the footer<span style="display:none"><script language="javascript" type="text/javascript" src="http://js.users.51.la/1967272.js"></script></span></div>
+</div>
+</body>
+</html>
+
+
+
+
+
+<%-- <jsp:include page="index-elements/index_top.jsp" />
+<div id="container">
+<!-- 用AJAX解决 -->
+   <s:action name="propertyinfoAction!toListProcess" namespace="/" executeResult="true" />   
+   <s:action name="propertyinfoAction!toListfinish" namespace="/" executeResult="true" />   
+ --%>
+ <%--  
+ <div class="main">
+    <div class="class_type"> <img src="Images/class_type.gif" alt="新闻中心" /> </div>
+    <div class="content">
+      <ul class="class_date">
+      	<li id='class_month'>    
+      	 <!-- 循环显示主题列表 -->  	
+      	 <s:iterator id="topic" value="#request.topicList">
+      	 	<a href="index?newsinfo.topic.id=${topic.id}"><b>${topic.name}</b></a>
+      	 </s:iterator>
+      </ul>
+      <ul class="classlist"> 
+        <!-- 循环显示当前页新闻列表 -->     
+        <s:iterator id="news" value="#request.newsinfoList">
+            <li><a href="newsread?id=${news.id}"> ${news.title} </a>
+      	    <span> ${newsinfo.createDate}</span></li>
+        </s:iterator>     
+        <br> <br>
+        
+        <!-- 分页超链接部分 -->
+        <s:if test="pager.curPage>1">
+            <p align="center">
+			    <a href='index?pager.curPage=1&newsinfo.topic.id=${requestScope.newsinfo.topic.id}'>首页</a>
+			    <a href='index?pager.curPage=${pager.curPage-1 }&newsinfo.topic.id=${requestScope.newsinfo.topic.id}'>上一页</a>
+		    </p>
+		</s:if>		
+		
+		<s:if test="pager.curPage < pager.pageCount">
+		  <p align="center">
+			<a href='index?pager.curPage=${pager.curPage+1}&newsinfo.topic.id=${requestScope.newsinfo.topic.id}'>下一页</a>
+			<a href='index?pager.curPage=${pager.pageCount }&newsinfo.topic.id=${requestScope.newsinfo.topic.id}'>尾页</a>
+		  </p>
+		</s:if>
+       </ul>
+    </div>   
+  </div> 
+  --%>
+<!-- </div>
+ -->

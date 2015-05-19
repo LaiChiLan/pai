@@ -1,0 +1,8 @@
+body { font-family:Verdana; font-size:14px; margin:0;}
+
+#container {margin:0 auto; width:100%;}
+#mainContent { height:500px; margin-bottom:5px;}
+#opt_list{ float:left; width:130px; padding:10px 0 0 14px;}
+#sidebar { float:left; width:200px; height:500px;  }
+#content { margin-left:205px !important; margin-left:202px; height:500px; background:#ffa;}
+#footer { height:60px; background:#9c6;}

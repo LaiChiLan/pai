@@ -1,0 +1,69 @@
+<%@ page language="java" pageEncoding="gbk"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%-- <%@ taglib uri='/struts-tags' prefix='s' %>   --%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<title>省药检资产处置管理系统</title>
+	
+	<link href="CSS/main.css" rel="stylesheet" type="text/css" />
+	<script language="javascript">
+		function check(){
+			var userName = document.getElementById("userName");
+			var passWord = document.getElementById("passWord");
+			if(userName.value == ""){
+				alert("用户名不能为空！请重新填入！");
+				userName.focus();	
+				return false;
+			}else if(passWord.value == ""){
+				alert("密码不能为空！请重新填入！");
+				passWord.focus();
+				return false;
+			}
+			return true;
+		}
+		
+		function focusOnLogin(){
+			var passWord = document.getElementById("passWord");
+			if( passWord != null )
+				passWord.focus();	
+		}
+	</script>
+</head>
+<body onload="focusOnLogin()">
+<div id="header">
+	<div id="top_login">	
+	<c:if test="${empty user.userName} ">
+	<!-- 	<form action="validateLogin" method="post" onsubmit="return check()"> -->
+	 <form action="UserAction!doLogin" method="get" onsubmit="return check()">  	
+		    <label>用户名</label>
+			<input type="text" id="userName"  name="userName" value="${user.userName}" class="login_input" />
+			<label> 密&#160;&#160;码 </label>
+			<input type="password" id="passWord" name="passWord" value="${user.passWord}" class="login_input" />
+			<input type="submit" class="login_sub" value="登录" />
+			<label id="error"> </label>			
+		</form>
+	</c:if>
+	 
+	 <c:if test="${not empty user.userName}">
+		欢迎您 ：${user.userName }   &nbsp; &nbsp; &nbsp;
+<%-- 	<c:if test="${user.userName=='董凤祥'} "><a href="/News/admin">登录控制台</a></c:if>  --%>
+		&nbsp; <a  href="loginout">退出</a>
+	  </c:if>  
+  </div>
+  <div id="nav">
+	  <table>
+	    <tr>
+	    	<td><div id="logo"> <img src="Images/logo.jpg" alt="新闻" /> </div></td>
+	    	<td><img src="Images/a_b01.gif" alt="" /></td>
+	    </tr>
+	  </table>
+    <!--mainnav end-->
+  </div>
+</div>
+</body>
+</html>
+
